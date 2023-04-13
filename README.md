@@ -4,6 +4,7 @@
 - HTML
 - CSS
 - JavaScript
+- React
 
 ## Attribution
 The inital project is based the work from [John Smilga](https://github.com/john-smilga). Links: 

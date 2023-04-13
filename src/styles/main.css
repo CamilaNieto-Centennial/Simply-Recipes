@@ -67,6 +67,7 @@ html {
 body {
   background: var(--backgroundColor);
   font-family: var(--bodyFont);
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
@@ -75,7 +76,8 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  max-width: 40em;
+  /*max-width: 40em;*/
+  text-align: justify;
 }
 
 h1,
@@ -254,9 +256,220 @@ ul {
   margin-top: -1rem;
 }
 
+
+/* ------------------------------------------------------------------ */
+/* NEW STYLES ⏬ */
+
+/* Fonts and Backgrounds */
+.black-bg {
+  background: var(--black);
+}
+.white-font {
+  color: var(--white);
+}
+
+
+
+
 /*
 =============== 
 Navbar
 ===============
 */
+nav {
+  height: 6rem;
+}
+
+.centerFlexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav>ul {
+  margin: 0;
+  width: 90vw;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.nav-header>li:nth-child(1) { /*Move it up*/
+  margin-right: 2rem;
+  display: flex;
+  align-items: flex-end;
+}
+.nav-header>li:nth-child(1)>a>img {
+  width: 200px;
+}
+
+/* Hamburger Button -> Hidden */
+.nav-btn {
+  display: none;
+}
+
+/* Links & Button*/
+.nav-body {
+  display: block;
+  width: 100%;
+  display: flex;
+}
+
+/* All Items in the list (Logo, Links, Button) */
+nav>ul li {
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+/* All Items Style */
+nav>ul li>a {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--grey-900);
+  letter-spacing: var(--letterSpacing);
+  transition: var(--transition);
+}
+nav>ul li>a:hover {
+  color: var(--primary-500);
+}
+
+/* Contact Button */
+.nav-body>li:nth-child(5) {
+  margin-left: auto;
+  margin-right: 0;
+}
+.contact-link a {
+  padding: 0.15rem 1rem;
+}
+
+/* Screen devices until 992px */
+@media screen and (max-width:992px){
+  nav {
+    height: auto; /*23em*/
+  }
+
+  nav>ul {
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+  }
+
+  .nav-header, .nav-body {
+    flex: 100%;
+  }
+
+  /* Logo & Hamburger Button */
+  .nav-header {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Logo */
+  .nav-header>li:nth-child(1) { /*Move it up*/
+    align-items: center;
+  }
+  /* Hamburger Button */
+  .nav-header>li:nth-child(2) {
+    margin-right: 0;
+  }
+  
+  /* Hamburger Button -> Shown */
+  .nav-btn {
+    display:block;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .nav-body {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  /* Show the links after clicking on Hamburger Button */
+  .show-links {
+    height: 310px;
+  }
+
+  /* Links & Button */
+  .nav-body>li {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--grey-500);
+  }
+
+}
+
+
+
+
+
+/*
+=============== 
+Page
+===============
+*/
+.page {
+  padding-top: 2rem;
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: calc(100vh - (6rem + 4rem))
+}
+
+/* Subcontent or */
+.subcontainer {
+  margin: 0 auto 1em auto;
+}
+
+/* Last container */
+.last-subcontainer {
+  padding-bottom: 3rem;
+}
+
+
+
+
+
+
+/*
+=============== 
+Home
+===============
+*/
+.main-image {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+/*
+=============== 
+Footer
+===============
+*/
+footer {
+  font-size: 1rem;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > p {
+  margin-bottom: 0;
+}
+.footer-logo, footer a {
+  color: var(--primary-500);
+}
 
