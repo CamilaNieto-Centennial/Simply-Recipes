@@ -6,6 +6,13 @@
 - JavaScript
 - React
 
+## How to run
+1. Clone the repo to your local machine
+2. `npm install`
+3. `npm start`
+4. Go to `http://localhost:3000`
+    1. The port number maybe be different if you are running other projects concurrently 
+
 ## Attribution
 The inital project is based the work from [John Smilga](https://github.com/john-smilga). Links: 
 
